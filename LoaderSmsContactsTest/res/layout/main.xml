@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#ff66ccff"
+        >
+
+    <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            ></FrameLayout>
+
+
+    <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+        <RadioButton
+                android:id="@+id/radio_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="短信"
+                style="@style/style_radio_button"
+                android:checked="true"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+        <RadioButton
+                android:id="@+id/radio_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                style="@style/style_radio_button"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+    </RadioGroup>
+
+</LinearLayout>
+
