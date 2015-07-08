@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+
+
+    <RadioGroup
+            android:id="@+id/home_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#f4f4f4"
+            >
+
+        <RadioButton
+                android:id="@+id/tab_home_hot"
+                style="@style/news_tab_button"
+                android:text="热点"
+                />
+        <RadioButton
+                android:id="@+id/tab_home_beijing"
+                style="@style/news_tab_button"
+                android:text="北京"
+                />
+
+        <RadioButton
+                android:id="@+id/tab_home_entertainment"
+                style="@style/news_tab_button"
+                android:text="娱乐"
+                />
+
+        <RadioButton
+                android:id="@+id/tab_home_sport"
+                style="@style/news_tab_button"
+                android:text="体育"
+                />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/home_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+</LinearLayout>
