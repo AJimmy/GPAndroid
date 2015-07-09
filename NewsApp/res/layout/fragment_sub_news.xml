@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="#f4f4f4">
 
     <TextView
             android:id="@+id/sub_news_text"
@@ -10,12 +11,15 @@
             android:layout_height="wrap_content"
             android:text="text"
             android:textSize="30sp"
+            android:visibility="gone"
             />
 
     <ListView
             android:id="@+id/sub_news_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             />
+    <!--android:divider="#6699ff"-->
 
 </LinearLayout>

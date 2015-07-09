@@ -1,58 +1,53 @@
 package com.alice.news.entity;
 
-import android.graphics.Bitmap;
-
 /**
- * Created by Administrator on 15-7-8.
- * Project: NewsApp
+ * Created by Administrator on 15-6-27.
+ * Project: MyAssistance
  * User: Alice
- * Data: 15-7-8
+ * Data: 15-6-27
  */
 public class News {
-    private Bitmap bitmap;
-    private String title;
-    private String time;
-    private String content;
+    private String cover;
+    private String subject;
+    private String summary;
+    private String changed;
 
-    public News(String content, Bitmap bitmap, String title, String time) {
-        this.content = content;
-        this.bitmap = bitmap;
-        this.title = title;
-        this.time = time;
+    public News(String summary, String subject, String cover, String changed) {
+        this.summary = summary;
+        this.subject = subject;
+        this.cover = cover;
+        this.changed = changed;
     }
 
-    public News() {
+    public String getChanged() {
+        return changed;
     }
 
-    public Bitmap getBitmap() {
-        return bitmap;
+    public void setChanged(String changed) {
+        this.changed = changed;
     }
 
-    public void setBitmap(Bitmap bitmap) {
-        this.bitmap = bitmap;
+    public String getCover() {
+        return cover;
     }
 
-    public String getContent() {
-        return content;
+    public void setCover(String cover) {
+        this.cover = cover;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getSubject() {
+        return subject;
     }
 
-    public String getTime() {
-        return time;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public String getSummary() {
+        return summary;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 }

@@ -20,8 +20,8 @@ public class HttpTools {
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
         con.setRequestMethod("GET");
-        con.setConnectTimeout(3000);
-        con.setReadTimeout(3000);
+        con.setConnectTimeout(5000);
+        con.setReadTimeout(5000);
         con.setDoInput(true);
         con.connect();
 

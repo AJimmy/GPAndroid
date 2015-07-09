@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment implements RadioGroup.OnCheckedChange
         for (int i = 0; i < 4; i++) {
             SubNewsFragment fragment = new SubNewsFragment();
             Bundle args = new Bundle();
-            args.putString("key", "news " + i);
+            args.putString("page", ""+(i+1));
             fragment.setArguments(args);
             fragmentList.add(fragment);
         }
@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment implements RadioGroup.OnCheckedChange
         tabHome.setOnCheckedChangeListener(this);
         pagerHome.addOnPageChangeListener(this);
 
-        tabHome.check(0);
+        tabHome.check(R.id.tab_home_hot);
         return view;
     }
 
