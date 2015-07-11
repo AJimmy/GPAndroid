@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.RadioGroup;
 import com.alice.news.adapter.NewsFragmentAdapter;
 import com.alice.news.fragment.HomeFragment;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class MainActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener, ViewPager.OnPageChangeListener {
 
+    private static final String TAG = "MainActivity";
     private RadioGroup tabBar;
     private ViewPager viewPager;
 
@@ -24,6 +26,8 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        Log.e(TAG, "onCreate ---------------------------");
 
         viewPager = (ViewPager) findViewById(R.id.news_pager);
         tabBar = (RadioGroup) findViewById(R.id.news_tab_bar);
