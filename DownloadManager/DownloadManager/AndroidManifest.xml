@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.alice.downloadmanager"
+          android:versionCode="1"
+          android:versionName="1.0"
+        >
+
+    <uses-sdk android:minSdkVersion="17"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+            >
+        <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name"
+                android:exported="true"
+                android:launchMode="singleTask"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <!-- 自定义隐式意图，实现系统的ACTION_VIEW-->
+            <!-- android:host="" 监测哪个网址去处理， *号支持所有网站-->
+            <!-- android:mimeType="" text/plain支持文本，application/pdf, image/* 图片， video/* 视频，*/* 所有类型  ...... -->
+            <!--android:scheme="" 当前协议 -->
+            <!--  android:pathPattern="\\*" 正则表达式，*支持所有的网址 -->
+
+            <!--android:mimeType="*/*"-->
+            <!--android:pathPattern="\\*"-->
+            <!-- data url形式scheme://host:port/path/path-->
+            <!-- http://*/*-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                        android:host="*"
+                        android:scheme="http"
+                        />
+                <!-- 对于系统的ACTION需要指定category为DEFAULT-->
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.DownloadService"/>
+    </application>
+</manifest>
